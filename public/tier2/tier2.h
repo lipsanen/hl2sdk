@@ -84,7 +84,7 @@ public:
 		if ( !BaseClass::Connect( factory ) )
 			return false;
 
-		if ( IsPrimaryAppSystem() )
+		if ( this->IsPrimaryAppSystem() )
 		{
 			ConnectTier2Libraries( &factory, 1 );
 		}
@@ -93,7 +93,7 @@ public:
 
 	virtual void Disconnect() 
 	{
-		if ( IsPrimaryAppSystem() )
+		if ( this->IsPrimaryAppSystem() )
 		{
 			DisconnectTier2Libraries();
 		}
